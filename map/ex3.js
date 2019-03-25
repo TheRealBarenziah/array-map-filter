@@ -60,15 +60,16 @@ En sortie:
  */
 
 const getMoviesFreshness = (array) => array.map((object) => {
+  let certifFreshLabel = {label:'certified fresh'}
+  let freshLabel = {label:'fresh'}
+  let rottenLabel = {label:'rotten'}
   if (object.rating > 75) {
-    return object.label = `certified fresh`
+    return Object.assign(object, certifFreshLabel)
   } else if (object.rating >= 60 && object.rating <= 75) {
-    return object.label = `fresh`
+    return Object.assign(object, freshLabel)
   } else {
-    return object.label = `rotten`
+    return Object.assign(object, rottenLabel)
   }
 })
-
-
 // Ne pas modifier l'export
 module.exports = getMoviesFreshness;
