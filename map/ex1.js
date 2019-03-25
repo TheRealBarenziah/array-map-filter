@@ -20,9 +20,11 @@ En sortie: [
 ]
 
  */
+const getStringsLength = (array) => array.map((str) => {
+  return str + ' contains ' + str.length + ' characters'
+})
 
-function getStringsLength(strings) {
-}
+console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']))
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1

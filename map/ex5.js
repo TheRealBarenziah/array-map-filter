@@ -12,7 +12,12 @@ Tableau renvoyé par multiplyOddIndices:
   [3, 8, 11, 39, 19, 35]
 */
 
-function multiplyOddIndices(numbers) {
-}
+const multiplyOddIndices = (array) => array.map((int, index) => {
+  if (index % 2 === 0) {
+    return int
+  } else {
+    return int * index
+  }
+})
 
 module.exports = multiplyOddIndices;

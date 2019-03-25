@@ -42,10 +42,13 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
-}
-
-
+const getFoodCategories = (array) => array.map((object) => {
+  if (object.isVegetarian === true) {
+    return `${object.food} is suitable for vegetarians`
+  } else {
+    return `${object.food} is not suitable for vegetarians`
+  }
+})
 
 // Ne pas modifier l'export
 module.exports = getFoodCategories;

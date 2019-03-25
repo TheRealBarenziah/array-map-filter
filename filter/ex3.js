@@ -23,8 +23,10 @@ Sortie attendue:
 
  */
 
-function keepStarks(names) {
-}
+
+const keepStarks = (array) => array.filter((arrayElement) => {
+  return arrayElement.endsWith('Stark')
+});
 
 // Ne pas modifier l'export
 module.exports = keepStarks;

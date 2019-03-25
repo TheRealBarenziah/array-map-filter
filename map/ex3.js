@@ -59,9 +59,15 @@ En sortie:
 
  */
 
-function getMoviesFreshness(movies) {
-}
-
+const getMoviesFreshness = (array) => array.map((object) => {
+  if (object.rating > 75) {
+    return object.label = `certified fresh`
+  } else if (object.rating >= 60 && object.rating <= 75) {
+    return object.label = `fresh`
+  } else {
+    return object.label = `rotten`
+  }
+})
 
 
 // Ne pas modifier l'export

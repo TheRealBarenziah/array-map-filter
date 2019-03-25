@@ -14,9 +14,8 @@ Exemple d'entrée:
   [-10, 5, 15, 20]
 
  */
-
-function getMultiplesOf(numbers, n) {
-}
-
+const getMultiplesOf = (array, number) => array.filter((arrayElement) => {
+  return arrayElement % number == 0;
+});
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;
