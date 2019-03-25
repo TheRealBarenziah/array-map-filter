@@ -30,7 +30,7 @@ Sortie attendue:
 
 
 const filterOnPrice = (array, maxPrice) => array.filter((object) => {
-  return object.price < maxPrice
+  return object.price <= maxPrice
 });
 // Ne pas modifier l'export
 module.exports = filterOnPrice;
