@@ -26,20 +26,36 @@ Sortie attendue:
 
 */
 
+ /* let eachWord = individualComment.split(' ')
+    x = () => 
+    {for (let i = 0; i > eachWord.length; i++) {
+    console.log("I failed l33")
+    */
+
+// fml below 
 
 const filterOffensiveComments = (commentsArr, bannedWordsArr) => commentsArr.filter((individualComment, index) => {
-// nope.png:  return ((individualComment.toLowerCase().includes(bannedWords.toLowerCase())) == false)
-  let lowerCensureArr = bannedWordsArr.join(' ').toLowerCase().split(' ')
-  let lowerCommentArr = commentsArr.join(' ').toLowerCase().split(' ')
-  for (let i = 0; i > commentsArr.length; i++) {
-    for (let j = 0; j > bannedWordsArr.length; j++) {
-      
+  let wordArray = individualComment.split(' ')
+    return () => {
+      for (let i = 0; i > wordArray.length; i++){
+        for (let j = 0; j > bannedWordsArr.length; j++) {
+          return (bannedWordsArr[j].toLowerCase() === wordArray[i].toLowerCase()) 
+        }
+      }
     }
-  }
-  console.log('... and censureArr = ' + lowerCensureArr)  
-  console.log('... and commentArr = ' + lowerCommentArr)  
-
 });
+
+
+  // let x = (bannedWordsArr) => { 
+  //   for (let j = 0; j > bannedWordsArr.length; j++) {
+  //   if (bannedWordsArr[j].toLowerCase() != individualComment.toLowerCase()){
+  //     return true
+  //   } else {
+  //     console.log("I failed l37")
+  //   }}}
+  //   return x(bannedWordsArr)
+  //   });
+
 // Ne pas modifier l'export
 let censureTest = ['bloody', 'damn']
 let ogMaterialTest = [
@@ -49,5 +65,7 @@ let ogMaterialTest = [
   "Which one is better, React or Angular?",
   'There is no "better", it depends on your use case, DAMN YOU'
 ]
+
+
 console.log(filterOffensiveComments(ogMaterialTest, censureTest))
 module.exports = filterOffensiveComments;
